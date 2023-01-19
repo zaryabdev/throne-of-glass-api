@@ -1,0 +1,28 @@
+{
+  "name": "throne-of-glass-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app.ts",
+    "ts:build": "rm -rf ./dist && tsc",
+    "prestart": "npm run ts:build",
+    "start": "node dist/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaryabdev/throne-of-glass-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zaryabdev/throne-of-glass-api/issues"
+  },
+  "homepage": "https://github.com/zaryabdev/throne-of-glass-api#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  }
+}
