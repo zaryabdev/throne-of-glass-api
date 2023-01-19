@@ -21,8 +21,18 @@
   },
   "homepage": "https://github.com/zaryabdev/throne-of-glass-api#readme",
   "devDependencies": {
+    "@types/express": "^4.17.15",
+    "@types/mysql": "^2.15.21",
+    "@types/node": "^18.11.18",
     "nodemon": "^2.0.20",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "axios": "^1.2.3",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
   }
 }
