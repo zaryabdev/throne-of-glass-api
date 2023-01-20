@@ -1,6 +1,8 @@
 npm install express axios cheerio dotenv mysql
 npm install --save-dev @types/express @types/node
 
+https://github.com/planetscale/beam/blob/main/prisma/schema.prisma
+
 Pscale cli commands
 pscale --version
 pscale login
@@ -18,6 +20,18 @@ CREATE TABLE `Post` (
 `hidden` tinyint(1) NOT NULL DEFAULT '0',
 `createdAt` datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
 `updatedAt` datetime(3) NOT NULL,
+`authorId` varchar(255) NOT NULL,
+PRIMARY KEY (`id`),
+FULLTEXT KEY `Post_title_content_idx` (`title`,`content`)
+);
+
+CREATE TABLE `Backups` (
+`id` varchar(255) NOT NULL,
+`createdAt` datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+`title` varchar(255) NOT NULL,
+`content` text NOT NULL,
+`contentHtml` text NOT NULL,
+`hidden` tinyint(1) NOT NULL DEFAULT '0',
 `authorId` varchar(255) NOT NULL,
 PRIMARY KEY (`id`),
 FULLTEXT KEY `Post_title_content_idx` (`title`,`content`)
